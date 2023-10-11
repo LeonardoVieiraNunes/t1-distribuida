@@ -1,11 +1,10 @@
-package com.distribuida.trabalho1;
+package com.distribuida.trabalho1.throttler;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Throttler {
 	private final int period;
-
 	private final CallsCounter callsCounter;
 
 	public Throttler(int period, CallsCounter callsCounter) {

@@ -1,4 +1,4 @@
-package com.distribuida.trabalho1;
+package com.distribuida.trabalho1.throttler;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -7,8 +7,9 @@ import java.util.concurrent.atomic.AtomicLong;
 public class CallsCounter {
 	private final Map<String, AtomicLong> clientCallsCount = new ConcurrentHashMap<>();
 
-	public void addClient(String clientName) {
-		clientCallsCount.putIfAbsent(clientName, new AtomicLong(0));
+	public CallsCounter() {
+		clientCallsCount.put("João", new AtomicLong(0));
+		clientCallsCount.put("Maria", new AtomicLong(0));
 	}
 
 	public void incrementCount(String clientName) {
