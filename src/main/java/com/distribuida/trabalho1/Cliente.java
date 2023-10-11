@@ -1,4 +1,4 @@
-package com.distribuida.trabalho1.model;
+package com.distribuida.trabalho1;
 
 import lombok.Getter;
 import lombok.Setter;

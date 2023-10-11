@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import com.distribuida.trabalho1.model.Cliente;
+import com.distribuida.trabalho1.Cliente;
 
 @RestController
 @RequestMapping("/cliente")

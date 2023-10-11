@@ -1,7 +1,7 @@
 package com.distribuida.trabalho1.tests;
 
 import org.springframework.web.client.RestTemplate;
-import com.distribuida.trabalho1.model.Cliente;
+import com.distribuida.trabalho1.Cliente;
 
 public class ClienteHttpTask implements Runnable {
 	private final RestTemplate restTemplate;
