@@ -15,7 +15,7 @@ public class ClienteHttp {
 		ExecutorService executorService = Executors.newFixedThreadPool(2);
 
 		// Execute as duas threads simultaneamente
-		executorService.execute(() -> makeCalls("João"));
+		executorService.execute(() -> makeCalls("Joao"));
 		executorService.execute(() -> makeCalls("Maria"));
 
 		// Aguarde a conclusão das threads

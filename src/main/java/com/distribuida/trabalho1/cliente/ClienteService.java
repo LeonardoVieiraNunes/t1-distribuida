@@ -2,6 +2,8 @@ package com.distribuida.trabalho1.cliente;
 
 import java.util.Map;
 
+import com.distribuida.trabalho1.enums.Prioridade;
+import com.distribuida.trabalho1.queuemanager.QueueManager;
 import lombok.Getter;
 
 import com.distribuida.trabalho1.throttler.CallsCounter;
@@ -11,11 +13,13 @@ public class ClienteService {
 
 	@Getter
 	private final Map<String, Long> mapAllowedClientsMaxRequestsPerSecond = Map.of(
-			"João", 3L,
-			"Maria", 3L
+			"Joao", 4L,
+			"Maria", 1L,
+			"Pedro", 2L
 	);
 
 	private final CallsCounter callsCounter;
+
 
 	public ClienteService(Throttler throttler, CallsCounter callsCounter) {
 		this.callsCounter = callsCounter;
@@ -26,6 +30,7 @@ public class ClienteService {
 		if (checkIfAvailable(clienteModel)) {
 			callsCounter.incrementCount(clienteModel.getNome());
 			System.out.println("Requisição feita para " + clienteModel.getNome() + " (nro de requisições: " + callsCounter.getCount(clienteModel.getNome()) + ")");
+//			queueManager.send(clienteModel.getNome(), Prioridade.prioridadePorNome(clienteModel.getNome()));
 			return "Requisição recebida com sucesso!";
 		} else {
 			System.out.println("Requisição negada para " + clienteModel.getNome() + " (nro de requisições: " + callsCounter.getCount(clienteModel.getNome()) + ")");
