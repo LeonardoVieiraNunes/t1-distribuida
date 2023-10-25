@@ -13,7 +13,6 @@ public class QueueManager {
     }
 
     public synchronized void send(String message_text, int message_priority) {
-        //TODO check
         QueueItem message = new QueueItem(message_text, message_priority);
         queue.add(message);
     }
