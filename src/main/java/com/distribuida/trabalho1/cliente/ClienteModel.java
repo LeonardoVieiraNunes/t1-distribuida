@@ -2,11 +2,11 @@ package com.distribuida.trabalho1.cliente;
 
 import lombok.Getter;
 import lombok.Setter;
-import com.distribuida.trabalho1.enums.FuncionalidadeEnum;
+import com.distribuida.trabalho1.enums.Prioridade;
 
 @Getter
 @Setter
 public class ClienteModel {
 	private String nome;
-	private FuncionalidadeEnum funcionalidade;
+	private Prioridade funcionalidade;
 }
