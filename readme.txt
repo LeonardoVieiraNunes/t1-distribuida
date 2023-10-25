@@ -7,6 +7,8 @@ sdk install java 17.0.6-zulu
 Instalar Maven 3.8.7
 sdk install maven 3.8.7
 
+Instalação clean do Maven
+mvn clean install
 
 Buildar projeto (executar do diretorio base do projeto t1-distribuida)
 mvn clean package
