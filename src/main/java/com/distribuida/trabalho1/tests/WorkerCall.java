@@ -1,10 +1,9 @@
 package com.distribuida.trabalho1.tests;
 
 
-import com.distribuida.trabalho1.cliente.ClienteModel;
-import com.distribuida.trabalho1.queuemanager.QueueManager;
+
 import com.distribuida.trabalho1.workers.WorkerService;
-import org.springframework.web.client.RestTemplate;
+
 
 
 import java.util.concurrent.ExecutorService;
@@ -15,7 +14,7 @@ public class WorkerCall {
     public static void main(String[] args) {
 
         // Crie um ExecutorService com duas threads
-        ExecutorService executorService = Executors.newFixedThreadPool(1);
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
 
         // Execute as duas threads simultaneamente
         executorService.execute(WorkerCall::makeCalls);

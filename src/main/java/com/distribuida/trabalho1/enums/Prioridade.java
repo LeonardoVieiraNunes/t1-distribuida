@@ -1,13 +1,13 @@
 package com.distribuida.trabalho1.enums;
 
 public enum Prioridade {
-	JOAO(3),
-	MARIA(2),
-	PEDRO(1);
+	PRIORITARIO(3),
+	COMUM(2),
+	POSTERGADO(1);
 
 	public final Integer priority;
 
-	private Prioridade(Integer priority) {
+	Prioridade(Integer priority) {
 		this.priority = priority;
 	}
 

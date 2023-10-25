@@ -24,6 +24,6 @@ public class QueueManager {
         if (nonNull(removed)) {
             return removed.getTask_message();
         }
-        return "null";
+        return "";
     }
 }

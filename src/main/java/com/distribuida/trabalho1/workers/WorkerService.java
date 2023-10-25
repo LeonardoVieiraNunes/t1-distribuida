@@ -1,8 +1,6 @@
 package com.distribuida.trabalho1.workers;
 
-import com.distribuida.trabalho1.cliente.ClienteModel;
-import com.distribuida.trabalho1.enums.Prioridade;
-import com.distribuida.trabalho1.queuemanager.QueueManager;
+
 import org.springframework.web.client.RestTemplate;
 
 
@@ -13,15 +11,16 @@ public class WorkerService {
         RestTemplate restTemplate = new RestTemplate();
         String received = restTemplate.getForObject("http://localhost:8080/cliente/fila", String.class);
         String toprint;
-        assert received != null;
-        if (received.isEmpty()) toprint = "Fila vazia!";
-        else toprint = "Requisição recebida de " + received;
-        System.out.println(toprint);
+        if (received != null) {
+            if (received.isEmpty()) toprint = "Fila vazia!";
+            else toprint = "Requisição recebida de " + received;
+            System.out.println(toprint);
+        } else {System.out.println("Fila vazia!");}
 //        System.out.println("stub");
 
     }
 
-    public void sendBack(String clientName) {
-        // TODO
-    }
+//    public void sendBack(String clientName) {
+//        // TODO
+//    }
 }

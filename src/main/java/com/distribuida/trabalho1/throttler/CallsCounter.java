@@ -8,8 +8,9 @@ public class CallsCounter {
 	private final Map<String, AtomicLong> clientCallsCount = new ConcurrentHashMap<>();
 
 	public CallsCounter() {
-		clientCallsCount.put("Joao", new AtomicLong(0));
-		clientCallsCount.put("Maria", new AtomicLong(0));
+		clientCallsCount.put("PRIORITARIO", new AtomicLong(0));
+		clientCallsCount.put("COMUM", new AtomicLong(0));
+		clientCallsCount.put("POSTERGADO", new AtomicLong(0));
 
 	}
 

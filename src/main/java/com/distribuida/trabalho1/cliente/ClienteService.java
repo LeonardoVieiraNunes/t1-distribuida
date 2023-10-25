@@ -2,8 +2,7 @@ package com.distribuida.trabalho1.cliente;
 
 import java.util.Map;
 
-import com.distribuida.trabalho1.enums.Prioridade;
-import com.distribuida.trabalho1.queuemanager.QueueManager;
+
 import lombok.Getter;
 
 import com.distribuida.trabalho1.throttler.CallsCounter;
@@ -13,9 +12,9 @@ public class ClienteService {
 
 	@Getter
 	private final Map<String, Long> mapAllowedClientsMaxRequestsPerSecond = Map.of(
-			"Joao", 4L,
-			"Maria", 1L,
-			"Pedro", 2L
+			"PRIORITARIO", 300L,
+			"COMUM", 200L,
+			"POSTERGADO", 100L
 	);
 
 	private final CallsCounter callsCounter;

@@ -8,15 +8,12 @@ import com.distribuida.trabalho1.cliente.ClienteModel;
 
 public class ClienteHttp {
 	public static void main(String[] args) {
-		// Crie um RestTemplate
-		RestTemplate restTemplate = new RestTemplate();
-
 		// Crie um ExecutorService com duas threads
 		ExecutorService executorService = Executors.newFixedThreadPool(2);
 
 		// Execute as duas threads simultaneamente
-		executorService.execute(() -> makeCalls("Joao"));
-		executorService.execute(() -> makeCalls("Maria"));
+		executorService.execute(() -> makeCalls("COMUM"));
+		executorService.execute(() -> makeCalls("PRIORITARIO"));
 
 		// Aguarde a conclusão das threads
 		executorService.shutdown();
